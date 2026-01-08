@@ -6,7 +6,7 @@ What are the top skills based on salary?
 */
 
 SELECT 
-    skills
+    skills,
     ROUND(AVG(jpf.salary_year_avg), 0) AS avg_salary
 FROM job_postings_fact AS jpf
 INNER JOIN skills_job_dim AS sjd ON sjd.job_id = jpf.job_id
